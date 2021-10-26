@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/geekzone/static/css/main.45067e7e.chunk.css",
+    "main.js": "/geekzone/static/js/main.1be0f11b.chunk.js",
+    "main.js.map": "/geekzone/static/js/main.1be0f11b.chunk.js.map",
+    "runtime-main.js": "/geekzone/static/js/runtime-main.2a526cc2.js",
+    "runtime-main.js.map": "/geekzone/static/js/runtime-main.2a526cc2.js.map",
+    "static/js/2.c93b07e3.chunk.js": "/geekzone/static/js/2.c93b07e3.chunk.js",
+    "static/js/2.c93b07e3.chunk.js.map": "/geekzone/static/js/2.c93b07e3.chunk.js.map",
+    "static/js/3.1b6ba51a.chunk.js": "/geekzone/static/js/3.1b6ba51a.chunk.js",
+    "static/js/3.1b6ba51a.chunk.js.map": "/geekzone/static/js/3.1b6ba51a.chunk.js.map",
+    "index.html": "/geekzone/index.html",
+    "static/css/main.45067e7e.chunk.css.map": "/geekzone/static/css/main.45067e7e.chunk.css.map",
+    "static/js/2.c93b07e3.chunk.js.LICENSE.txt": "/geekzone/static/js/2.c93b07e3.chunk.js.LICENSE.txt",
+    "static/media/banner.ec22b2b8.png": "/geekzone/static/media/banner.ec22b2b8.png",
+    "static/media/index.css": "/geekzone/static/media/fondo.6eeb1f6b.gif",
+    "static/media/gidCod.9f81416c.gif": "/geekzone/static/media/gidCod.9f81416c.gif"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.2a526cc2.js",
+    "static/js/2.c93b07e3.chunk.js",
+    "static/css/main.45067e7e.chunk.css",
+    "static/js/main.1be0f11b.chunk.js"
+  ]
+}
