@@ -45,7 +45,7 @@ const CrudForm=({agregarRegistro, actualizarRegistro, datoEditar, setDatoEditar}
 
     return(
         <div>
-            <h3 class="segundo">&nbsp;&nbsp;&nbsp;Agregar</h3>
+            <h3>Agregar</h3>
             <form onSubmit={handleSubmit}>
                 <input type="text" name="usuario" placeholder="@Usuario" onChange={handleChange} value={form.usuario}/>
                 <input type="text" name="apodo" placeholder="Apodo"  onChange={handleChange} value={form.apodo}/>

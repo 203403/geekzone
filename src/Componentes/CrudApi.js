@@ -3,42 +3,14 @@ import CrudForm from './CrudForm';
 import CrudTable from './CrudTable';
 
 
-const DatosInicial=[
-    {id:1,
-    usuario:"@fulanito_01",
-    apodo:"Feannor",
-    contrasenia:"lotr001",},
-
-    {id:2,
-    usuario:"@fulanito_02",
-    apodo:"Finwe",
-    contrasenia:"lotr002",},
-    
-    {id:3,
-    usuario:"@fulanito_03",
-    apodo:"Idril",
-    contrasenia:"lotr003",},
-
-    {id:4,
-    usuario:"@fulanito_04",
-    apodo:"Morgoth",
-    contrasenia:"lotr004",},
-
-    {id:5,
-    usuario:"@fulanito_05",
-    apodo:"Fingolfin",
-    contrasenia:"lotr005",},
-];
-
-const CrudApp=() =>{
-    const [db, setDb] = useState(DatosInicial);
+const CrudApi=() =>{
+    const [db, setDb] = useState([]);
     const [datoEditar, setDatoEditar] = useState(null);
 
     const agregarRegistro=(data)=>{
         data.id=Date.now();
-        console.log(data);
+        //console.log(data);
         setDb([...db, data]);
-        DatosInicial.push(setDb);
     };
 
     const actualizarRegistro=(data)=>{
@@ -61,7 +33,7 @@ const CrudApp=() =>{
 
     return(
         <div>
-            <h2>Crud APP</h2>
+            <h2>Crud API</h2>
             <CrudForm
                 agregarRegistro={agregarRegistro}
                 actualizarRegistro={actualizarRegistro}
@@ -80,4 +52,4 @@ const CrudApp=() =>{
     )
 }
 
-export default CrudApp
+export default CrudApi

@@ -3,14 +3,14 @@ import CrudTableFila from "./CrudTableFIla"
 
 const CrudTable = ({data, setDatoEditar, borrarRegistro}) =>{
     return(
-        <div class="tercer">
-            <h3 class="segundo">Tabla de Datos</h3>
+        <div>
+            <h3>Tabla de Datos</h3>
             <table>
                 <tbody>
                     <tr>
-                        <th >Usuario</th>
-                        <th >Apodo</th>
-                        <th >Opciones</th>
+                        <th>Usuario</th>
+                        <th>Apodo</th>
+                        <th>Opciones</th>
                     </tr>
                     {data.length > 0?
                         

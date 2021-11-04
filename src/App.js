@@ -1,20 +1,13 @@
 import './App.css';
 import CrudApp from './Componentes/CrudApp';
-import banner from './banner.png';
-import gif from './gidCod.gif';
-
+import CrudApi from './Componentes/CrudApi';
 
 function App() {
   return (
     <>
-    <div id="container">
-    <img src={gif} class="gif"/>
-    <header id="encabezado">
-      
-      <img src={banner} class="banner"/>
-    </header>
+    <h1>Ejercicios React</h1>
+    <CrudApi/>
     <CrudApp/>
-    </div>
     </>
   );
 }
