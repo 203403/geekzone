@@ -1,21 +1,76 @@
-import React, { useState } from "react";
+import React, {useEffect, useState} from "react";
+import { helpHttp } from "../helpers/helpHttp";
 import CrudForm from './CrudForm';
 import CrudTable from './CrudTable';
-
+import Loader from "./Loader";
+import Message from "./Message";
 
 const CrudApi=() =>{
-    const [db, setDb] = useState([]);
+    const [db, setDb] = useState(null);
     const [datoEditar, setDatoEditar] = useState(null);
+    const [error, setError] = useState(null);
+    const [loading, setLoading] = useState(false);
+
+    let api=helpHttp();
+
+    let url = "http://localhost:5000/usuarios";
+
+    useEffect(()=>{
+        helpHttp().get(url).then((res)=>{
+            setLoading(true);
+            console.log(res);
+
+            if(!res.err){
+                setDb(res);
+                setError(null)
+            }
+            else{
+                setDb(null);
+                setError(res);
+            }
+            setLoading(false);
+        });
+    },[url]);
 
     const agregarRegistro=(data)=>{
+
         data.id=Date.now();
-        //console.log(data);
+
+        let options={
+            body:data,
+            headers:{"content-type":"application/json"}
+        };
+
+        api.post(url, options).then((res)=>{
+            console.log(res);
+            if(!res.err){
+                setDb([...db, res]);
+            }else{
+                setDb(res);
+            }
+        });
+
         setDb([...db, data]);
     };
 
     const actualizarRegistro=(data)=>{
-        let nuevoDato = db.map((el)=> (el.id===data.id? data:el));
-        setDb(nuevoDato);
+
+        let endpoint=`${url}/${data.id}`;
+        console.log(endpoint);
+
+        let options={
+            body:data,
+            headers:{"content-type":"application/json"}
+        };
+
+        api.put(endpoint, options).then((res)=>{
+            if(!res.err){
+                let nuevoDato = db.map((el)=> (el.id===data.id? data:el));
+                setDb(nuevoDato);
+            }else{
+                setDb(res);
+            }
+        })
     };
 
     const borrarRegistro=(id)=>{
@@ -24,8 +79,19 @@ const CrudApi=() =>{
         );
 
         if(borrar){
-            let nuevoDato=db.filter((el)=>el.id !== id);
-            setDb(nuevoDato)
+            let endpoint= `${url}/${id}`;
+            let options={
+                headers:{"content-type":"application/json"}
+            };
+
+            api.del(endpoint, options).then((res)=>{
+                if(!res.err){
+                    let nuevoDato = db.filter((el)=> el.id!==id);
+                    setDb(nuevoDato);
+                }else{
+                    setDb(res);
+                }
+            });
         }else{
             return;
         }
@@ -41,11 +107,15 @@ const CrudApi=() =>{
                 setDatoEditar={setDatoEditar}
             />
 
-            <CrudTable
+            {loading&& <Loader/>}
+            {error&& <Message
+                msg={`Error ${error.status}:${error.statusText}`}
+                bgColor="#dc3545"/>}
+            {db&& <CrudTable
                 data={db}
                 setDatoEditar={setDatoEditar}
                 borrarRegistro={borrarRegistro}
-            />
+            />}
 
             <table></table>
         </div>
