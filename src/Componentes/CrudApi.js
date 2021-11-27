@@ -99,7 +99,7 @@ const CrudApi=() =>{
 
     return(
         <div>
-            <h2>Crud API</h2>
+            <h2>◐Administración de usuarios◑</h2>
             <CrudForm
                 agregarRegistro={agregarRegistro}
                 actualizarRegistro={actualizarRegistro}

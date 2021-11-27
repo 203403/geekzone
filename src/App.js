@@ -1,13 +1,11 @@
 import './App.css';
-import CrudApp from './Componentes/CrudApp';
 import CrudApi from './Componentes/CrudApi';
 
 function App() {
   return (
     <>
-    <h1>Ejercicios React</h1>
+    <h1>Administracion</h1>
     <CrudApi/>
-    <CrudApp/>
     </>
   );
 }
