@@ -2,9 +2,9 @@
   "usuarios": [
     {
       "id": 1,
-      "usuario": "@fulanito_01",
-      "apodo": "Feannor",
-      "contrasenia": "lotr001"
+      "usuario": "@fulanito_012",
+      "apodo": "Feannor1",
+      "contrasenia": "lotr0011"
     },
     {
       "id": 2,
@@ -29,12 +29,6 @@
       "usuario": "@fulanito_05",
       "apodo": "Fingolfin",
       "contrasenia": "lotr005"
-    },
-    {
-      "id": 1638165477438,
-      "usuario": "@fulanito_06",
-      "apodo": "Donnermar",
-      "contrasenia": "123456"
     }
   ]
 }

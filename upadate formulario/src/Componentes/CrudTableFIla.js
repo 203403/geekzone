@@ -7,8 +7,8 @@ const CrudTableFila = ({el, setDatoEditar, borrarRegistro}) =>{
             <td>{usuario}</td>
             <td>{apodo}</td>
              <td>
-                <button onClick={() => setDatoEditar(el) } class="button-13">Editar</button>
-                <button onClick={() => borrarRegistro(id) } class="button-13" >Eliminar</button>
+                <button onClick={() => setDatoEditar(el) }>Editar</button>
+                <button onClick={() => borrarRegistro(id) }>Eliminar</button>
              </td>
         </tr>
     );

@@ -5,29 +5,29 @@ import CrudTable from './CrudTable';
 
 const DatosInicial=[
     {id:1,
-    usuario:"@fulanito_01",
-    apodo:"Feannor",
-    contrasenia:"lotr001",},
+    usuario:"@user_01",
+    apodo:"Manolo",
+    contrasenia:"pass01",},
 
     {id:2,
-    usuario:"@fulanito_02",
-    apodo:"Finwe",
-    contrasenia:"lotr002",},
+    usuario:"@user_02",
+    apodo:"Ariana",
+    contrasenia:"pass02",},
     
     {id:3,
-    usuario:"@fulanito_03",
-    apodo:"Idril",
-    contrasenia:"lotr003",},
+    usuario:"@user_03",
+    apodo:"Paolo",
+    contrasenia:"pass03",},
 
     {id:4,
-    usuario:"@fulanito_04",
-    apodo:"Morgoth",
-    contrasenia:"lotr004",},
+    usuario:"@user_04",
+    apodo:"Hachi",
+    contrasenia:"pass04",},
 
     {id:5,
-    usuario:"@fulanito_05",
-    apodo:"Fingolfin",
-    contrasenia:"lotr005",},
+    usuario:"@user_05",
+    apodo:"Filanito",
+    contrasenia:"pass05",},
 ];
 
 const CrudApp=() =>{
@@ -61,7 +61,7 @@ const CrudApp=() =>{
 
     return(
         <div>
-            <h2>Crud APP</h2>
+            <h2 id="titulo">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;◐Administración de usuarios◑</h2>
             <CrudForm
                 agregarRegistro={agregarRegistro}
                 actualizarRegistro={actualizarRegistro}

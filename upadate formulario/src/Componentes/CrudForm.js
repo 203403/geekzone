@@ -44,14 +44,14 @@ const CrudForm=({agregarRegistro, actualizarRegistro, datoEditar, setDatoEditar}
     };
 
     return(
-        <div class="pagregar">
-            <h3 class="segundo">Agregar</h3>
-            <form onSubmit={handleSubmit}>    
-                <input type="text" name="usuario" class="redondeado" placeholder="@usuario" onChange={handleChange} value={form.usuario}/>
-                <input type="text" name="apodo" class="redondeado" placeholder="Apodo"  onChange={handleChange} value={form.apodo}/>
-                <input type="text" name="contrasenia" class="redondeado" placeholder="Contrasenia"  onChange={handleChange} value={form.contrasenia}/>
-                <input type="submit" class="button-17" role="button" value="Enviar"/>
-                <input type="reset" class="button-17" role="button" value="Limpiar" onClick={handleReset}/>
+        <div>
+            <h3>Agregar</h3>
+            <form onSubmit={handleSubmit}>
+                <input type="text" name="usuario" placeholder="@Usuario" onChange={handleChange} value={form.usuario}/>
+                <input type="text" name="apodo" placeholder="Apodo"  onChange={handleChange} value={form.apodo}/>
+                <input type="text" name="contrasenia" placeholder="Contrasenia"  onChange={handleChange} value={form.contrasenia}/>
+                <input type="submit" value="Enviar"/>
+                <input type="reset" value="Limpiar" onClick={handleReset}/>
             </form>
         </div>
     )
