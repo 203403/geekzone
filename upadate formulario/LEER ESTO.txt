@@ -1,5 +1,0 @@
-Todas las modificaciones las he realizado en un
-diseño en blanco, no sobre el que esta en github,
-por lo que si lo pegas solo asi, puede que se pierdan
-cosas del diseño que ya habias hecho.
-Revisa bien todo antes para no perder nada.
